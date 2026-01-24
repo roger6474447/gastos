@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 text-gray-900 font-sans;
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+
+  /* Premium Button Styles */
+  .btn-primary {
+    @apply bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-3 rounded-lg font-medium shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/40 hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-gray-700 px-6 py-3 rounded-lg font-medium border border-gray-200 shadow-md hover:shadow-lg hover:border-gray-300 transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .btn-danger {
+    @apply bg-gradient-to-r from-red-500 to-rose-600 text-white px-6 py-3 rounded-lg font-medium shadow-lg shadow-red-500/30 hover:shadow-xl hover:shadow-red-500/40 hover:from-red-600 hover:to-rose-700 transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  /* Premium Input Styles */
+  .input-field {
+    @apply w-full px-4 py-3 rounded-lg border border-gray-200 bg-white/80 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 placeholder-gray-400;
+  }
+
+  /* Premium Card Styles */
+  .card {
+    @apply bg-white/80 backdrop-blur-md rounded-2xl shadow-xl border border-white/20 p-6 transition-all duration-300 hover:shadow-2xl;
+  }
+
+  .card-glass {
+    @apply bg-white/60 backdrop-blur-xl rounded-2xl shadow-2xl border border-white/40 p-8 transition-all duration-300;
+  }
+
+  /* Loading Spinner */
+  .spinner {
+    @apply inline-block w-6 h-6 border-4 border-current border-t-transparent rounded-full animate-spin;
+  }
+
+  /* Premium Table */
+  .table-premium {
+    @apply w-full bg-white/80 backdrop-blur-sm rounded-xl overflow-hidden shadow-lg;
+  }
+
+  .table-premium thead {
+    @apply bg-gradient-to-r from-blue-600 to-indigo-600 text-white;
+  }
+
+  .table-premium th {
+    @apply px-6 py-4 text-left text-sm font-semibold uppercase tracking-wider;
+  }
+
+  .table-premium td {
+    @apply px-6 py-4 border-b border-gray-100;
+  }
+
+  .table-premium tbody tr {
+    @apply hover:bg-blue-50/50 transition-colors duration-150;
+  }
+
+  /* Badge Styles */
+  .badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium;
+  }
+
+  .badge-admin {
+    @apply bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-md;
+  }
+
+  .badge-user {
+    @apply bg-gradient-to-r from-blue-500 to-cyan-500 text-white shadow-md;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent;
+  }
+
+  .glass-effect {
+    @apply bg-white/30 backdrop-blur-xl border border-white/20;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 rounded-full;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gradient-to-b from-blue-400 to-indigo-500 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply from-blue-500 to-indigo-600;
+}
+
+/* Smooth transitions for all interactive elements */
+button,
+a,
+input,
+select,
+textarea {
+  @apply transition-all duration-200;
+}
+
+/* Image preview styles */
+.image-preview {
+  @apply relative overflow-hidden rounded-lg border-2 border-dashed border-gray-300 hover:border-blue-400 transition-colors duration-200;
+}
+
+.image-preview img {
+  @apply w-full h-full object-cover;
+}
